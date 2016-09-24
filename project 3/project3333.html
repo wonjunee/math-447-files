@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>MATH 447: Numerical Analysis</h1>
+
+<ul>
+<li><a href="http://mason.gmu.edu/~wlee10">Home</a></li>
+<li><a href="http://mason.gmu.edu/~wlee10/project0.html">Project 0</a></li>
+<li><a href="http://mason.gmu.edu/~wlee10/project1.html">Project 1</a></li>
+<li><a href="http://mason.gmu.edu/~wlee10/project2.html">Project 2</a></li>
+</ul>
+
+<h2 align="center">Project 3: Kinematics of the Stewart platform</h2>
+
+<h3>Prblem 6</h3>
+
+<p> In this problem, the damped pendulum is modified with oscillating pivot.</p>
+<p> The equation is modified as <br>
+<img src="pro3_1.png" alt="Sine Graph" width="250" height="45"><br>
+where A is the forcing strength.</p>
+<p> Set d = 0.1 a nd the length of the pendulum to be 2.5 meters.</p>
+<p>In the absence of forcing A = 0, the downward pendulum y = 0 is a stable equilibrium, and the inverted pendulum y = pi is an unstable equilibrium.</p>
+<p> Two examples are shown below. </p>
+
+<p><img src="oscillatingpivota0y0.png" alt="Sine Graph" width="500" height="350">
+<img src="oscillatingpivota0ypi.png" alt="Sine Graph" width="500" height="350"></p>
+
+<p> Two figures above show the moving pendulum when y = 0 and y= pi. </p>
+<p> Videos show two balls at the same position for a whole time. </p>
+<p> Downward pendulum at the left is a stable equilibrium. </p>
+<p> Inverted pendulum at the right is an unstable equilibrium. </p>
+<p> In this problem, y is set as 3.1, and find the range of parameter A for which the inverted pendulum becomes stable. </p>
+
+
+
+<p> To find the range of parameter A, bisection method was used to find the value as accurate as possible. </p>
+<p> Note that when the inverted pendulum is stable, then the ball never goes downward. </p>
+<p> The function of a parameter A is defined in a matlab code that gives +1 or -1.</p>
+<p> If the ball goes downward, then the function gives -1. </p>
+<p> If the ball never goes downward throughout the whole time period, the function gives +1. </p>
+<p> In conclusion, the range of parameter A was calculated as 18.333816137413876 <= A <= 25.677509645001138 </p>
+
+
+
+<h4>Matlab codes</h4>
+<li><a href="file:///C:/Users/Wonjun/Documents/Math%20447/project%203/html/bisectpend.html">bisectpend.m</a></li>
+<br>
+
+
+<h4>Problem 7</h4>
+
+<p> In this problem the range of parameter A was determined for which a stable downward equilibrium becomes unstable. </p>
+<p> The method from problem 6 is used similar way except that if the ball goes upward the function gives -1 and if the ball stays downward, then it gives +1. </p>
+<p> As a result, the smallest value of A is 14.727873288228963. </p>
+<h3>Matlab codes</h3>
+<li><a href="file:///C:/Users/Wonjun/Documents/Math%20447/project%203/html/bisectpend2.html">bisectpend2.m</a></li>
+<br>
+<img src="pro3_7.png" alt="Sine Graph" width="230" height="50"></p>
+<h3>Reference</h3>
+<p>Sauer, T. Numerical Analysis 2nd ed. Pearson</p>
+</body>
+</html>
